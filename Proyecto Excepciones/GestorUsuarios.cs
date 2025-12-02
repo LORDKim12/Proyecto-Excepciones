@@ -47,7 +47,7 @@ namespace Proyecto_Excepciones
             if (edad < 18 || edad > 99)
                 throw new RegistroUsuarioException("La edad debe estar entre 18 y 99 años.");
 
-            if (!correo.Contains("@") || !correo.Contains("."))
+            if (!correo.Contains("@") || !correo.Contains(".com"))
                 throw new RegistroUsuarioException("El formato del correo es inválido.");
 
             if (listaUsuarios.Any(u => u.nombre == nombre || u.correo == correo))
@@ -61,8 +61,18 @@ namespace Proyecto_Excepciones
 
         public Usuarios BuscarPorIndice(string indiceTexto)
         {
+            // Si el texto es un número válido...
             if (int.TryParse(indiceTexto, out int indice))
             {
+                // VERIFICAMOS MANUALMENTE EL RANGO
+                // Si el índice es negativo O es mayor/igual a la cantidad de usuarios...
+                if (indice < 0 || indice >= listaUsuarios.Count)
+                {
+                    // ...Lanzamos MANUALMENTE la excepción que pide el profesor
+                    throw new IndexOutOfRangeException();
+                }
+
+                // Si pasa el if, es seguro acceder
                 return listaUsuarios[indice];
             }
             return null;

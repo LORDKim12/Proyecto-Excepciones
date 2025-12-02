@@ -23,14 +23,12 @@ namespace Proyecto_Excepciones
 
         private void ActualizarLista()
         {
-            // 1. Limpiamos la lista de CONSULTA (listBox2) para no repetir datos
+            
             listBox2.Items.Clear();
 
-            // 2. Pedimos la lista completa de usuarios al gestor
+            
             List<Usuarios> lista = gestor.ObtenerUsuarios();
 
-            // 3. Recorremos la lista y agregamos cada usuario al ListBox
-            // Usamos un contador 'i' para mostrar el índice (útil para la búsqueda por número)
             for (int i = 0; i < lista.Count; i++)
             {
                 listBox2.Items.Add($"[{i}] Nombre: {lista[i].nombre} - Edad: {lista[i].edad}");
