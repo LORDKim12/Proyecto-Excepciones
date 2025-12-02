@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Excepciones
 {
-    internal class Usuarios
+    public class Usuarios
     {
         public string? nombre;
         public int? edad;
@@ -14,7 +14,7 @@ namespace Proyecto_Excepciones
 
         public Usuarios(string? nombre, int? edad, string? correo) { this.nombre = nombre; this.edad = edad; this.correo = correo; }
                 
-        public interface Ierrores { }
+    
         
 
         

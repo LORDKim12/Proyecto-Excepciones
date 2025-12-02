@@ -30,6 +30,7 @@
         {
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            listBox1 = new ListBox();
             button1 = new Button();
             textBox3 = new TextBox();
             textBox2 = new TextBox();
@@ -37,12 +38,11 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            listBox1 = new ListBox();
             tabPage2 = new TabPage();
-            label4 = new Label();
-            textBox4 = new TextBox();
-            button2 = new Button();
             listBox2 = new ListBox();
+            button2 = new Button();
+            textBox4 = new TextBox();
+            label4 = new Label();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
@@ -76,6 +76,14 @@
             tabPage1.Text = "Registro";
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.Location = new Point(390, 6);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(372, 384);
+            listBox1.TabIndex = 14;
+            // 
             // button1
             // 
             button1.Location = new Point(15, 277);
@@ -84,6 +92,7 @@
             button1.TabIndex = 13;
             button1.Text = "Registrar";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
             // 
             // textBox3
             // 
@@ -133,14 +142,6 @@
             label1.TabIndex = 7;
             label1.Text = "Nombre";
             // 
-            // listBox1
-            // 
-            listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(390, 6);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(372, 384);
-            listBox1.TabIndex = 14;
-            // 
             // tabPage2
             // 
             tabPage2.Controls.Add(listBox2);
@@ -155,21 +156,13 @@
             tabPage2.Text = "Consulta";
             tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // listBox2
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(6, 18);
-            label4.Name = "label4";
-            label4.Size = new Size(77, 20);
-            label4.TabIndex = 0;
-            label4.Text = "Busqueda:";
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(6, 41);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(274, 27);
-            textBox4.TabIndex = 1;
+            listBox2.FormattingEnabled = true;
+            listBox2.Location = new Point(452, 6);
+            listBox2.Name = "listBox2";
+            listBox2.Size = new Size(310, 384);
+            listBox2.TabIndex = 3;
             // 
             // button2
             // 
@@ -179,14 +172,23 @@
             button2.TabIndex = 2;
             button2.Text = "Buscar";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click_1;
             // 
-            // listBox2
+            // textBox4
             // 
-            listBox2.FormattingEnabled = true;
-            listBox2.Location = new Point(452, 6);
-            listBox2.Name = "listBox2";
-            listBox2.Size = new Size(310, 384);
-            listBox2.TabIndex = 3;
+            textBox4.Location = new Point(6, 41);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(274, 27);
+            textBox4.TabIndex = 1;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(6, 18);
+            label4.Name = "label4";
+            label4.Size = new Size(77, 20);
+            label4.TabIndex = 0;
+            label4.Text = "Busqueda:";
             // 
             // Form1
             // 
